@@ -9,6 +9,7 @@ import NotificationBootstrap from '@/components/NotificationBootstrap';
 import { SignInScreen } from '@/components/SignInScreen';
 import { Loading } from '@/components/ui';
 import { COLORS } from '@/constants/theme';
+import { useRouteTitle } from '@/utils/pageTitle';
 import { WorkspaceProvider } from '@/context/WorkspaceContext';
 import { account, type AccountSession } from '@/services/account';
 import { describeAuthError } from '@/services/authService';
@@ -47,6 +48,7 @@ function clearWebAuthCode() {
 }
 
 export default function RootLayout() {
+  useRouteTitle();
   const pathname = usePathname();
   const [fontsLoaded] = useLocalFonts({
     Athanasius: require('../../assets/fonts/CopticVine-Athanasius-v1.0.ttf'),

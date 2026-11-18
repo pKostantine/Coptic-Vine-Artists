@@ -1,4 +1,4 @@
-// A copy of Coptic Vine's src/services/cvApiAuth.ts (pKostantine/Coptic-Vine), kept the same: change it there first.
+// A copy of Coptic Vine's src/services/cvApiAuth.ts (pKostantine/Coptic-Vine-Books), kept the same: change it there first.
 /**
  * Signing in to cv-api (workers/api: Better Auth on D1) from Coptic Vine
  * (set up in src/services/userApi.ts). It calls

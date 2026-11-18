@@ -38,7 +38,7 @@
     "web": {
       "bundler": "metro",
       "output": "single",
-      "favicon": "./assets/images/coptic-vine-artists-favicon.png"
+      "favicon": "./assets/images/coptic-vine-artists-icon.png"
     },
     "plugins": [
       "expo-router",
