@@ -19,6 +19,7 @@
       "icon": "./assets/images/coptic-vine-artists-icon.png",
       "supportsTablet": true,
       "bundleIdentifier": "com.copticvine.artists",
+      "appleTeamId": "SVFMQZK524",
       "infoPlist": {
         "LSApplicationQueriesSchemes": [
           "copticvine-books",
