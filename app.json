@@ -5,7 +5,10 @@
     "version": "0.1.0",
     "orientation": "default",
     "icon": "./assets/images/coptic-vine-artists-icon.png",
-    "scheme": "copticvineartists",
+    "scheme": [
+      "copticvine-artists",
+      "copticvineartists"
+    ],
     "userInterfaceStyle": "dark",
     "platforms": [
       "ios",
@@ -14,13 +17,15 @@
     ],
     "ios": {
       "icon": "./assets/images/coptic-vine-artists-icon.png",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.copticvine.artists"
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E9B93A",
         "foregroundImage": "./assets/images/coptic-vine-artists-android-foreground.png"
-      }
+      },
+      "package": "com.copticvine.artists"
     },
     "web": {
       "bundler": "metro",
@@ -35,9 +40,9 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#14301B",
-          "image": "./assets/images/coptic-vine-seal.png",
-          "imageWidth": 160
+          "backgroundColor": "#3E1102",
+          "image": "./assets/images/coptic-vine-mark.png",
+          "imageWidth": 120
         }
       ],
       "expo-font"

@@ -4,12 +4,13 @@
  * one accent, on true black. Blocks have no outlines: depth comes from the
  * green gradients and the surfaces below.
  */
+// The app's own colour (Coptic Vine design, "App ecosystem palettes"); the names are the one app's green.
 export const COLORS = {
   // Brand palette — cv-green, cv-green-deep and the steps between them.
-  green: '#2B5A30',
-  greenDeep: '#14301B',
-  greenMid: '#1D4424',
-  greenGlow: '#3A7A3F',
+  green: '#A24C2C',
+  greenDeep: '#3E1102',
+  greenMid: '#6B2C15',
+  greenGlow: '#B76243',
   gold: '#E3B53B',
   goldBright: '#ECD48A',
   goldSoft: 'rgba(227, 181, 59, 0.13)',
@@ -17,18 +18,18 @@ export const COLORS = {
 
   // Surfaces. Cards fade from surfaceDeep down to surface.
   black: '#000000',
-  surface: '#0B1C10',
-  surfaceSoft: '#133020',
-  surfaceDeep: '#10291A',
+  surface: '#1A0C08',
+  surfaceSoft: '#29160F',
+  surfaceDeep: '#22110C',
   // Inputs and inset tiles sit in a well of black on a card.
   inset: 'rgba(0, 0, 0, 0.32)',
   hairline: 'rgba(255, 255, 255, 0.08)',
   hover: 'rgba(255, 255, 255, 0.04)',
-  border: '#23301F',
+  border: '#40251C',
 
   white: '#FFFFFF',
-  muted: '#CDD8CB',
-  faint: '#8E9C8B',
+  muted: '#F1DED0',
+  faint: '#A89588',
 
   // Status colours, taken from the reader's rubric so they read as part of
   // the same family: People orange for warnings, Priest red for failures,
