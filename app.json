@@ -18,7 +18,15 @@
     "ios": {
       "icon": "./assets/images/coptic-vine-artists-icon.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.copticvine.artists"
+      "bundleIdentifier": "com.copticvine.artists",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "copticvine-books",
+          "copticvine-canon",
+          "copticvine-music",
+          "copticvine-learn"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {

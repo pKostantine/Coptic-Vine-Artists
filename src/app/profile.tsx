@@ -5,6 +5,7 @@ import { Banner, Button, Card, Field, Label, Loading, Page, PageHeader, StatusPi
 import { COLORS, RADII, SPACING, TYPOGRAPHY } from '@/constants/theme';
 import { useWorkspace } from '@/context/WorkspaceContext';
 import { FileSelectButton } from '@/components/FileSelectButton';
+import { AccountSection } from '@/components/AccountSection';
 import { creatorService } from '@/services/creatorService';
 import { resolveImageUrl } from '@/services/mediaService';
 import type { ArtistProfile, ArtistSocialLink, UploadCandidate } from '@/types/creator';
@@ -299,6 +300,7 @@ export default function ArtistProfileScreen() {
       <Page>
         <PageHeader title="Artist profile" />
         <Card title="Could not load your profile" description={error || 'No artist profile is set up for this account yet.'} />
+        <AccountSection />
       </Page>
     );
   }
@@ -481,6 +483,8 @@ export default function ArtistProfileScreen() {
           onPress={() => setExtraLinks((current) => [...current, newExtraLink()])}
         />
       </Card>
+
+      <AccountSection />
     </Page>
   );
 }
