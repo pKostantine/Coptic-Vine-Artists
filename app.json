@@ -30,7 +30,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E9B93A",
+        "backgroundColor": "#A24C2C",
         "foregroundImage": "./assets/images/coptic-vine-artists-android-foreground.png"
       },
       "package": "com.copticvine.artists"

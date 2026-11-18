@@ -40,16 +40,16 @@ export function HeroGlow({ height = 380, style }: { height?: number; style?: Sty
   return (
     <View style={[styles.glow, { height }, style]} pointerEvents="none">
       <LinearGradient
-        colors={[COLORS.greenDeep, '#0C1F11', COLORS.black]}
+        colors={[COLORS.greenDeep, COLORS.surfaceDeep, COLORS.black]}
         locations={[0, 0.45, 1]}
         style={StyleSheet.absoluteFill}
       />
       <Svg width="100%" height="100%" style={StyleSheet.absoluteFill}>
         <Defs>
           <RadialGradient id="cvHeroGlow" cx="50%" cy="0%" rx="70%" ry="85%" fx="50%" fy="0%">
-            <Stop offset="0" stopColor="#346E3A" stopOpacity="0.55" />
-            <Stop offset="0.4" stopColor="#224C28" stopOpacity="0.3" />
-            <Stop offset="1" stopColor="#000000" stopOpacity="0" />
+            <Stop offset="0" stopColor={COLORS.greenGlow} stopOpacity="0.55" />
+            <Stop offset="0.4" stopColor={COLORS.greenMid} stopOpacity="0.3" />
+            <Stop offset="1" stopColor={COLORS.black} stopOpacity="0" />
           </RadialGradient>
         </Defs>
         <Rect x="0" y="0" width="100%" height="100%" fill="url(#cvHeroGlow)" />
