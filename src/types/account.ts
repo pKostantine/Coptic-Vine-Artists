@@ -1,4 +1,4 @@
-// A copy of Coptic Vine's src/types/account.ts (pKostantine/Coptic-Vine), kept the same: change it there first.
+// A copy of Coptic Vine's src/types/account.ts (pKostantine/Coptic-Vine-Books), kept the same: change it there first.
 /**
  * The signed-in account as the app reads it, and what signing in can do: the
  * same for Supabase Auth and for cv-api's Better Auth (src/services/accountAuth.ts).
