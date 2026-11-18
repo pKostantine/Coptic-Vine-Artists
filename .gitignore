@@ -6,3 +6,7 @@ dist/
 *.log
 .DS_Store
 .wrangler/
+
+# Native projects, made by expo prebuild from app.json
+/ios
+/android
