@@ -5,17 +5,15 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Wordmark } from '@/components/Brand';
 import BottomTabBar, { type ArtistTab } from '@/components/BottomTabBar';
 import Icon, { type IconName } from '@/components/Icon';
-import { IconButton } from '@/components/ui';
 import { COLORS, RADII, SPACING, TYPOGRAPHY } from '@/constants/theme';
 import { useWorkspace } from '@/context/WorkspaceContext';
-import { account as signedIn } from '@/services/account';
-import { disableNativeNotificationDevice } from '@/services/notificationService';
+import { signOut } from '@/services/signOut';
 
 const SECTIONS: { href: Href; match: string; label: string; icon: IconName; tab: Exclude<ArtistTab, null> }[] = [
   { href: '/', match: '/', label: 'Submissions', icon: 'document-outline', tab: 'submissions' },
   { href: '/releases', match: '/releases', label: 'Releases', icon: 'globe-outline', tab: 'releases' },
   { href: '/lyrics', match: '/lyrics', label: 'Lyrics Studio', icon: 'lyrics-outline', tab: 'lyrics' },
-  { href: '/profile', match: '/profile', label: 'Artist profile', icon: 'person-outline', tab: 'profile' },
+  { href: '/profile', match: '/profile', label: 'Profile & account', icon: 'person-outline', tab: 'profile' },
 ];
 
 const DESKTOP_NAV_MIN_WIDTH = 1100;
@@ -41,14 +39,6 @@ export function AppShell({ children }: { children: ReactNode }) {
   const desktopNavigation = width >= DESKTOP_NAV_MIN_WIDTH && !coarsePointer;
   const activeTab = SECTIONS.find((section) => isSectionActive(pathname, section.match))?.tab ?? null;
 
-  const signOut = async () => {
-    try {
-      await disableNativeNotificationDevice();
-    } catch (error) {
-      console.warn('Unable to detach this device from Coptic Vine Artists notifications before sign-out:', error);
-    }
-    await signedIn.signOut();
-  };
 
   const switcher = accounts.map((workspace) => {
     const active = workspace.id === account?.id;
@@ -130,7 +120,6 @@ export function AppShell({ children }: { children: ReactNode }) {
           <View style={styles.mobileBrand}>
             <Wordmark product="Artists" seal={34} compact />
           </View>
-          <IconButton icon="log-out-outline" label="Log out" onPress={() => void signOut()} size={38} />
         </View>
 
         {accounts.length > 1 && (
