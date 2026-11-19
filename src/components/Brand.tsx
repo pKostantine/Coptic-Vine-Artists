@@ -3,14 +3,14 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Svg, { Defs, RadialGradient, Rect, Stop } from 'react-native-svg';
 import { COLORS, TYPOGRAPHY } from '@/constants/theme';
 
-const SEAL = require('../../assets/images/coptic-vine-seal.png');
+const MARK = require('../../assets/images/coptic-vine-mark.png');
 
-/** The Coptic Vine seal: Christ holding John 15, framed by vines. The only illustration the brand uses. */
+/** The Coptic Vine mark: the vine, in white. The seal is no longer used anywhere (18 November 2026). */
 export function Seal({ size }: { size: number }) {
   return (
     <Image
-      source={SEAL}
-      style={{ width: size, height: size, borderRadius: size / 2 }}
+      source={MARK}
+      style={{ width: size, height: size }}
       resizeMode="contain"
       accessibilityIgnoresInvertColors
       accessibilityLabel="Coptic Vine"
@@ -18,7 +18,7 @@ export function Seal({ size }: { size: number }) {
   );
 }
 
-/** The seal beside the wordmark, with this app's name as a gold eyebrow underneath. */
+/** The mark beside the wordmark, with this app's name as a gold eyebrow underneath. */
 export function Wordmark({ product, seal = 40, compact = false }: { product: string; seal?: number; compact?: boolean }) {
   return (
     <View style={styles.wordmark}>
